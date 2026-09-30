@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Muro de estuco en terracota -->
+  <path d="M26 6 L44 2 L44 44 L26 44 Z" fill="#B85836" fill-opacity="0.25" stroke="#B85836" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="34" y1="4" x2="34" y2="44" stroke="#B85836" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Base de apoyo -->
+  <rect x="2" y="44" width="44" height="2.5" rx="1" fill="#B85836"/>
+
+  <!-- Llana / Espátula en blanco y ocre -->
+  <polygon points="34,14 44,17 40,32 30,29" fill="#FFFFFF" stroke="#C88A42" stroke-width="1.8" stroke-linejoin="round"/>
+  <line x1="33" y1="21" x2="39" y2="23" stroke="#B85836" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Brazo aplicando estuco -->
+  <path d="M18 28 L29 25 L36 23" stroke="#1A1412" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Cabeza y gorra -->
+  <circle cx="18" cy="13" r="5" fill="#1A1412"/>
+  <path d="M14 10 C18 8 23 8 26 11 L26 13 L20 13 Z" fill="#C88A42"/>
+
+  <!-- Cuerpo / overol -->
+  <path d="M13 19 C16 16 21 16 25 19 L22 33 L12 33 Z" fill="#1A1412"/>
+
+  <!-- Piernas de soporte -->
+  <path d="M18 33 L25 38 L25 44" stroke="#1A1412" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M14 33 L8 40 L8 44" stroke="#1A1412" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
