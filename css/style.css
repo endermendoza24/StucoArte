@@ -1749,7 +1749,8 @@ h1, h2, h3, h4, h5, h6 {
 .footer-bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   padding-top: 2rem;
   font-size: 0.84rem;
   color: rgba(179, 164, 149, 0.85);

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://stucoarte.com/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://stucoarte.com/images/stucoarte-335.jpg</image:loc>
+      <image:title>Aplicación y venta de estuco en Nicaragua - StucoArte</image:title>
+      <image:caption>Acabados de estuco en paredes interiores de restaurante</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://stucoarte.com/images/stucoarte-281.jpg</image:loc>
+      <image:title>Estuco en fachada residencial en Nicaragua</image:title>
+      <image:caption>Fachada exterior con acabado de estuco duradero</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://stucoarte.com/images/stucoarte-156.jpeg</image:loc>
+      <image:title>Paredes de estuco tradicional</image:title>
+      <image:caption>Corredor colonial y rancho con estuco orgánico</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://stucoarte.com/images/muro-estuco-terracota.jpg</image:loc>
+      <image:title>Estuco exterior en tono terracota</image:title>
+      <image:caption>Muros de estuco en color terracota para exteriores</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://stucoarte.com/images/fachada-villa-blanca.jpg</image:loc>
+      <image:title>Acabado de estuco en terraza y fachada</image:title>
+      <image:caption>Texturas finas de estuco para residencias</image:caption>
+    </image:image>
+  </url>
+</urlset>
