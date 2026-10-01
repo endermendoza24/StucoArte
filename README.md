@@ -1,11 +1,13 @@
-# StucoArte 🇳🇮 - Estuco, Texturas & Acabados Arquitectónicos
+# StucoArte 🇳🇮 - Aplicación y Venta de Estuco en Nicaragua
 
-Sitio web oficial de **StucoArte**, empresa nicaragüense especializada en la aplicación de estuco arquitectónico, texturas decorativas en tonos tierra y arcilla, molduras, frisos y enmarcados, con una destacada especialidad en acabados coloniales y rústicos para residencias, fachadas, terrazas y ranchos campestres.
+Sitio web de **StucoArte**. Negocio nicaragüense dedicado a la preparación, venta y aplicación de estuco en paredes interiores y exteriores de casas, restaurantes y otros espacios.
+
+Detrás de StucoArte está **Noel Mendoza Guadamuz**, con más de 20 años de experiencia en el oficio, quien prepara el estuco directamente, participa en la aplicación junto con su equipo y elabora muestras de color para acordar el acabado con cada cliente. Atiende Managua y otros departamentos de Nicaragua, coordinando previamente.
 
 - **Página oficial de Facebook:** [facebook.com/StucoArte](https://www.facebook.com/StucoArte)
-- **WhatsApp Oficial:** [+505 83771116](https://wa.me/50583771116)
+- **WhatsApp y Llamadas:** [+505 8377-1116](https://wa.me/50583771116)
 
-Desarrollado exclusivamente con tecnologías nativas web: **HTML5, CSS3 y JavaScript Vanilla puro**, sin frameworks ni dependencias. Optimizado para visualización estática local y despliegue inmediato en **GitHub Pages**.
+Desarrollado con tecnologías web nativas: **HTML5 semántico, CSS3 Vanilla y JavaScript Vanilla puro**, sin dependencias ni compilación externa.
 
 ---
 
@@ -13,20 +15,13 @@ Desarrollado exclusivamente con tecnologías nativas web: **HTML5, CSS3 y JavaSc
 
 ```text
 StucosDeNicaragua/
-├── index.html          # Estructura semántica, SEO y contenidos oficiales de StucoArte
+├── index.html          # Estructura semántica, contenidos confirmados y SEO de StucoArte
 ├── css/
-│   └── style.css       # Paleta cálida y noble (teja, ocre, cal y madera), diseño responsive y animaciones
+│   └── style.css       # Paleta cálida mineral, diseño responsive y estilos
 ├── js/
-│   └── script.js       # Menú móvil, galería con lightbox y generador de mensajes a WhatsApp
-├── images/
-│   ├── logo.png                     # Logotipo oficial circular (Web y Favicon)
-│   ├── logo-facebook.jpg            # Logotipo de alta resolución para avatar de Facebook
-│   ├── fachada-villa-blanca.jpg     # Foto real: Fachada de villa residencial moderna
-│   ├── muro-estuco-terracota.jpg    # Foto real: Muro interior de acento en arcilla
-│   ├── rancho-estuco-organico.jpg   # Foto real: Muros orgánicos y rancho campestre
-│   ├── terraza-estuco-arena.jpg     # Foto real: Corredor colonial en tono arena
-│   └── residencia-estuco-tropical.jpg # Foto real: Fachada exterior con molduras
-└── README.md           # Documentación y guía de despliegue a GitHub Pages
+│   └── script.js       # Menú móvil, filtro de galería, lightbox y enlace a WhatsApp
+├── images/             # Fotografías reales de trabajos realizados y logotipos
+└── README.md           # Documentación del proyecto
 ```
 
 ---
@@ -50,14 +45,12 @@ StucosDeNicaragua/
 
 ---
 
-## 🏛️ Especialidades de StucoArte
+## 🏛️ Servicios Confirmados de StucoArte
 
-1. **Estuco para Fachadas Residenciales:** Revestimiento exterior continuo, impermeable y de alta durabilidad.
-2. **Muros de Acento & Texturas Interiores:** Relieves decorativos y diseño visual para salas, comedores y lobbies.
-3. **Acabados Coloniales & Rústicos:** Estética clásica y atemporal en armonía con madera y teja.
-4. **Terrazas, Ranchos & Muros Orgánicos:** Bordes continuos y curvas suaves para áreas de descanso al aire libre.
-5. **Molduras, Frisos & Enmarcados:** Diseños geométricos, cornisas y enmarcados de ventanas y puertas.
-6. **Sellado & Protección de Acabados:** Sellado transparente mate que preserva el color y previene manchas de humedad.
+1. **Aplicación en exteriores:** Acabados de estuco para fachadas, muros, terrazas y corredores. Acordamos con usted el color y la textura para darle a su espacio la apariencia que busca.
+2. **Aplicación en interiores:** Estuco para paredes de casas, restaurantes y otros ambientes. Cuidamos los detalles de la aplicación para lograr un acabado que destaque su espacio.
+3. **Venta de estuco por quintal:** Preparamos y vendemos estuco por bolsa de un quintal. Contáctenos para consultar colores, disponibilidad y coordinar su compra.
+
 
 ---
 

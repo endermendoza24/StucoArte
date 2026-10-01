@@ -222,51 +222,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   const quoteForm = document.getElementById('quoteForm');
   const formStatus = document.getElementById('formStatus');
-  const btnSendWhatsApp = document.getElementById('btnSendWhatsApp');
 
   const getFormData = () => {
     const name = document.getElementById('clientName')?.value.trim() || '';
     const phone = document.getElementById('clientPhone')?.value.trim() || '';
-    const email = document.getElementById('clientEmail')?.value.trim() || '';
-    const service = document.getElementById('projectService')?.value || 'Acabados Coloniales';
-    const location = document.getElementById('projectLocation')?.value.trim() || 'Nicaragua';
+    const location = document.getElementById('projectLocation')?.value.trim() || '';
+    const service = document.getElementById('projectService')?.value || 'Aplicación en exteriores';
     const message = document.getElementById('projectMessage')?.value.trim() || '';
 
-    return { name, phone, email, service, location, message };
+    return { name, phone, location, service, message };
   };
 
-  // Enviar mensaje estructurado por WhatsApp oficial de StucoArte
-  btnSendWhatsApp?.addEventListener('click', (e) => {
-    e.preventDefault();
-    const data = getFormData();
-
-    if (!data.name || !data.phone) {
-      if (formStatus) {
-        formStatus.className = 'form-status-alert error';
-        formStatus.textContent = 'Por favor ingresa al menos tu Nombre y Número de Teléfono para generar el mensaje.';
-      }
-      return;
-    }
-
-    const whatsappMessage = 
-      `*Hola StucoArte, deseo solicitar una cotización de acabados:*\n\n` +
-      `👤 *Cliente:* ${data.name}\n` +
-      `📞 *Teléfono:* ${data.phone}\n` +
-      `✉️ *Correo:* ${data.email || 'No especificado'}\n` +
-      `📍 *Ubicación:* ${data.location}\n` +
-      `🏛️ *Servicio de Interés:* ${data.service}\n` +
-      `📝 *Detalles del Proyecto:* ${data.message || 'Deseo coordinar una visita técnica y cotización.'}`;
-
-    const encodedUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(encodedUrl, '_blank');
-
-    if (formStatus) {
-      formStatus.className = 'form-status-alert success';
-      formStatus.textContent = '¡Redirigiendo a WhatsApp con los datos de tu proyecto...! Nos comunicaremos a la brevedad.';
-    }
-  });
-
-  // Envío tradicional del formulario (validación y respuesta amigable)
+  // Preparar y enviar mensaje a WhatsApp oficial de StucoArte
   quoteForm?.addEventListener('submit', (e) => {
     e.preventDefault();
     const data = getFormData();
@@ -274,17 +241,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!data.name || !data.phone || !data.message) {
       if (formStatus) {
         formStatus.className = 'form-status-alert error';
-        formStatus.textContent = 'Por favor completa los campos obligatorios (Nombre, Teléfono y Mensaje).';
+        formStatus.textContent = 'Por favor complete su nombre, teléfono y los detalles de su consulta.';
       }
       return;
     }
 
+    const whatsappMessage = 
+      `Hola StucoArte, le escribo desde la página web:\n\n` +
+      `• Nombre: ${data.name}\n` +
+      `• Teléfono: ${data.phone}\n` +
+      (data.location ? `• Ubicación: ${data.location}\n` : '') +
+      `• Consulta: ${data.service}\n` +
+      `• Detalles: ${data.message}`;
+
+    const encodedUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
     if (formStatus) {
       formStatus.className = 'form-status-alert success';
-      formStatus.innerHTML = `<strong>¡Gracias por contactar a StucoArte, ${data.name}!</strong> Hemos recibido su consulta para <em>${data.service}</em>. Uno de nuestros asesores especialistas se comunicará al ${data.phone}.`;
+      formStatus.textContent = 'Abriendo WhatsApp con los datos de su consulta...';
     }
 
-    quoteForm.reset();
+    window.open(encodedUrl, '_blank');
   });
 
   // --------------------------------------------------------------------------
@@ -330,3 +307,10 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => el.classList.add('active'));
   }
 });
+
+// 1. Seleccionamos el elemento por su ID
+const yearElement = document.getElementById('year');
+
+// 2. Obtenemos el año actual y lo asignamos como contenido del elemento
+yearElement.textContent = new Date().getFullYear();
+

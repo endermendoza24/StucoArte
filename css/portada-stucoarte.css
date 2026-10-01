@@ -1,0 +1,219 @@
+/* StucoArte: portada fotográfica. Cargar después de style.css. */
+#siteHeader.site-header,
+#siteHeader.site-header.scrolled {
+  background: #241f1b;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+#siteHeader .brand-name { color: #fff; }
+#siteHeader .brand-name span { color: #cc8b65; }
+#siteHeader .brand-tagline { color: #d4c2b2; letter-spacing: .12em; }
+#siteHeader .nav-link { color: #e9e1d9; }
+#siteHeader .nav-link.active,
+#siteHeader .nav-link:hover { color: #dfad89; }
+#siteHeader .btn-quote {
+  background: #955238;
+  border: 1px solid #955238;
+  box-shadow: none;
+  border-radius: 4px;
+}
+#inicio.hero {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: max(720px, 92svh);
+  padding: 145px 0 100px;
+  gap: 0;
+  background: #30251e;
+  color: #fff;
+  isolation: isolate;
+}
+#inicio .hero-bg-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  margin: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+#inicio .hero-bg-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% 48%;
+  filter: none;
+  transform: none;
+  transition: none;
+}
+#inicio .hero-overlay {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(30,24,20,.91) 0%, rgba(30,24,20,.79) 31%, rgba(30,24,20,.30) 65%, rgba(30,24,20,.08) 100%);
+  z-index: 1;
+}
+#inicio .hero-texture-overlay { display: none; }
+#inicio .hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1240px, 88%);
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0;
+}
+#inicio .hero-content > * { max-width: 570px; }
+#inicio .hero-badge {
+  display: inline-flex;
+  padding: 0;
+  margin: 0 0 30px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+#inicio .badge-dot { display: none; }
+#inicio .badge-text {
+  color: #e1b89a;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+#inicio .hero-title {
+  margin: 0 0 26px;
+  font-size: clamp(42px, 4.7vw, 68px);
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -.035em;
+  color: #fff;
+  text-shadow: none;
+}
+#inicio .hero-title .text-gradient {
+  display: block;
+  color: #ebc7a9;
+  background: none;
+  -webkit-text-fill-color: #ebc7a9;
+}
+#inicio .hero-subtitle {
+  margin: 0 0 18px;
+  color: #f1e5da;
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+#inicio .hero-description {
+  max-width: 470px;
+  margin: 0 0 32px;
+  color: #d8cec6;
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+#inicio .hero-subtext,
+#inicio .hero-stats-grid { display: none; }
+#inicio .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0;
+}
+#inicio .hero-actions .btn {
+  min-height: 50px;
+  padding: 14px 22px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: none;
+  transform: none;
+  backdrop-filter: none;
+}
+#inicio .hero-actions .btn-whatsapp {
+  color: #fff;
+  background: #a45e40;
+  border: 1px solid #a45e40;
+}
+#inicio .hero-actions .btn-whatsapp:hover { background: #8d4c32; }
+#inicio .hero-actions .btn-secondary {
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.55);
+}
+#inicio .hero-actions .btn-secondary svg { stroke: #ebc7a9; }
+#inicio .hero-actions .btn-secondary:hover { background: rgba(255,255,255,.10); }
+#inicio .hero-content::after {
+  content: 'Más de 20 años de experiencia · Managua y otros departamentos';
+  display: block;
+  max-width: 570px;
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.2);
+  color: #cbb8a9;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: .025em;
+}
+@media (max-width: 900px) {
+  #inicio.hero { min-height: 740px; padding: 135px 0 70px; }
+  #inicio .hero-content { width: 88%; }
+  #inicio .hero-content > * { max-width: 520px; }
+  #inicio .hero-bg-img { object-position: 60% center; }
+  #inicio .hero-overlay {
+    background: linear-gradient(90deg, rgba(30,24,20,.88), rgba(30,24,20,.52));
+  }
+  #siteHeader .nav-menu.open { background: #241f1b; }
+}
+@media (max-width: 600px) {
+  #inicio.hero { min-height: 760px; padding: 125px 0 64px; }
+  #inicio .hero-title { font-size: clamp(40px, 9vw, 52px); }
+  #inicio .hero-subtitle { font-size: 19px; }
+  #inicio .hero-description { font-size: 15px; }
+  #inicio .badge-text { font-size: 10px; letter-spacing: .12em; }
+  #inicio .hero-bg-img { object-position: 72% center; }
+  #inicio .hero-overlay {
+    background: linear-gradient(180deg, rgba(30,24,20,.72), rgba(30,24,20,.86));
+  }
+  #inicio .hero-actions { gap: 12px; }
+  #inicio .hero-actions .btn { flex: 1 1 100%; justify-content: center; }
+  #inicio .hero-content::after { margin-top: 34px; }
+}
+
+/* Mismo terracota para todas las acciones de WhatsApp. */
+:root { --color-whatsapp: #a45e40; }
+.btn.btn-whatsapp,
+a.btn[href^="https://wa.me/"],
+#siteHeader .btn-quote,
+#inicio .hero-actions .btn-whatsapp,
+.floating-whatsapp {
+  background: #a45e40;
+  border-color: #a45e40;
+  color: #fff;
+  box-shadow: none;
+}
+.btn.btn-whatsapp:hover,
+a.btn[href^="https://wa.me/"]:hover,
+#siteHeader .btn-quote:hover,
+#inicio .hero-actions .btn-whatsapp:hover,
+.floating-whatsapp:hover {
+  background: #8d4c32;
+  border-color: #8d4c32;
+  color: #fff;
+  box-shadow: none;
+}
+.floating-whatsapp {
+  background: #25D366;
+  border-color: #25D366;
+}
+
+.floating-whatsapp:hover {
+  background: #1EBE5D;
+  border-color: #1EBE5D;
+}

@@ -602,17 +602,33 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   color: var(--color-white);
   line-height: 1.08;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.8rem;
   letter-spacing: -0.03em;
 }
 
+.hero-subtitle {
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  font-weight: 500;
+  color: var(--color-ochre-light);
+  margin-bottom: 1.2rem;
+  line-height: 1.35;
+}
+
 .hero-description {
-  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
   color: rgba(248, 244, 236, 0.9);
   line-height: 1.65;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.2rem;
   max-width: 680px;
   font-weight: 300;
+}
+
+.hero-subtext {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--color-sand-light);
+  font-weight: 500;
+  font-size: 0.98rem;
 }
 
 .hero-actions {
@@ -895,6 +911,106 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-link:hover svg {
   transform: translateX(4px);
+}
+
+/* ---------------------------------------------------------
+   8.1. CÓMO TRABAJAMOS (PROCESO)
+   --------------------------------------------------------- */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.process-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-sand-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.6rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.process-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.process-step-num {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.process-step-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-sand);
+  color: var(--color-secondary);
+  border-radius: var(--radius-full);
+}
+
+.process-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.6rem;
+}
+
+.process-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.contact-quick-banner {
+  background: rgba(37, 211, 102, 0.08);
+  border: 1.5px solid rgba(37, 211, 102, 0.35);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-quick-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-quick-text {
+  font-size: 0.92rem;
+  color: var(--color-dark);
+  line-height: 1.45;
+}
+
+.contact-quick-text strong {
+  color: #128C7E;
 }
 
 /* ---------------------------------------------------------
@@ -1287,6 +1403,78 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.2rem;
 }
 
+/* Cómo trabajamos: tarjetas más ligeras */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.process-grid .process-card {
+  padding: 28px 24px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(130, 86, 52, 0.14);
+  border-radius: 16px;
+  box-shadow: none;
+  min-height: 0;
+  height: auto;
+}
+
+.process-grid .process-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: rgba(130, 86, 52, 0.3);
+}
+
+.process-grid .process-step-header {
+  margin-bottom: 20px;
+}
+
+.process-grid .process-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #eee0d2;
+  color: #974523;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.process-grid .process-title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.process-grid .process-desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #665b51;
+}
+
+@media (max-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .process-grid .process-card {
+    padding: 24px;
+  }
+}
+
 /* Formulario */
 .contact-form-wrapper {
   background: var(--color-white);
@@ -1673,7 +1861,8 @@ h1, h2, h3, h4, h5, h6 {
    16. MEDIA QUERIES (RESPONSIVE)
    --------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .services-grid {
+  .services-grid,
+  .process-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1751,7 +1940,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.2rem 1.4rem;
   }
 
-  .services-grid {
+  .services-grid,
+  .process-grid {
     grid-template-columns: 1fr;
   }
 
